@@ -1,0 +1,64 @@
+﻿@model Crud.Models.Profile
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">Hot Dog Lover</h1>
+        <div class="text-center">@Html.ActionLink("Change", "Edit", new { id = Model.ID })</div>
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="col-sm-4">
+                <div class="profileImage">
+                    <img src="http://i60.tinypic.com/okblfl.png" alt="Alternate Text" /> 
+                </div>   
+                <p>@Html.LabelFor(model => model.Favorite): <span>@Html.DisplayFor(model => model.Favorite)</span></p>
+                <p>@Html.LabelFor(model => model.LastAte, "Last Ate"): <span>@Html.DisplayFor(model => model.LastAte)</span></p>
+                <p>@Html.LabelFor(model => model.Date): <span>@Html.DisplayFor(model => model.Date)</span></p>
+            </div>
+            <div class="col-sm-8">
+                <h2>@Html.DisplayFor(model => model.Name)</h2>
+                <p>@Html.DisplayFor(model => model.Bio)</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+<div>
+    <h4>Profile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+
+    </dl>
+</div>
+
+-->
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
